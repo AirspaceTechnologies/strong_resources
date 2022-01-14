@@ -87,8 +87,8 @@ module StrongResources
       add_relation(name, related_resource, only, except, disassociate, destroy)
     end
 
-    def has_one(*args, &blk)
-      belongs_to(*args, &blk)
+    def has_one(name, **args, &blk)
+      belongs_to(name, **args, &blk)
     end
 
     def permits(controller)
